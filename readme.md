@@ -3,14 +3,14 @@
 이 프로젝트는 Spring Boot 기반의 백엔드 스타터 팩입니다.
 초기 세팅 시간을 단축하고, 바로 비즈니스 로직 개발에 집중할 수 있도록 구성되었습니다.
 
-## 🛠 기술 스택 및 버전
+## 기술 스택 및 버전
 
 - **Java**: 17
 - **Spring Boot**: 3.3.5
 - **Build Tool**: Gradle
 - **Database**: MySQL
 
-## 📦 추가된 의존성 (Dependencies)
+## 추가된 의존성 (Dependencies)
 
 | 의존성 | 설명                                                         |
 | --- |------------------------------------------------------------|
@@ -21,7 +21,7 @@
 | `spring-boot-devtools` | 개발 편의성 제공 (자동 재시작 등)                                       |
 | `mysql-connector-j` | MySQL 데이터베이스 드라이버                                          |
 
-## 🚀 주요 기능 및 설정
+## 주요 기능 및 설정
 
 ### 1. AOP (Aspect Oriented Programming)
 - **위치**: `com.yonsai.starter.aop.LoggingAspect`
@@ -65,11 +65,11 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 ```
 
-## ▶️ 실행 방법
+## 실행 방법
 
 1. MySQL 데이터베이스를 생성합니다.
 2. `application.properties` 파일에서 DB 접속 정보를 수정합니다.
-3. 프로젝트 루트에서 다음 명령어로 실행합니다.
+3. 프로젝트 루트에서 다음 명령어로 실행합니다. 혹은 실행버튼으로 실행합니다.
    ```bash
    ./gradlew bootRun
    ```
