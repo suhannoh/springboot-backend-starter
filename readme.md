@@ -6,20 +6,20 @@
 ## 🛠 기술 스택 및 버전
 
 - **Java**: 17
-- **Spring Boot**: 3.4.2 (build.gradle에는 4.0.2로 되어 있으나 Spring Boot 최신 안정 버전은 3.x 대입니다. 확인 필요)
+- **Spring Boot**: 3.3.5
 - **Build Tool**: Gradle
 - **Database**: MySQL
 
 ## 📦 추가된 의존성 (Dependencies)
 
-| 의존성 | 설명 |
-| --- | --- |
-| `spring-boot-starter-data-jpa` | JPA 및 Hibernate 사용 |
-| `spring-boot-starter-validation` | 데이터 유효성 검사 (@Valid 등) |
-| `spring-boot-starter-webmvc` | Spring MVC 웹 애플리케이션 구축 |
-| `lombok` | Boilerplate 코드 제거 (Getter, Setter, Builder 등) |
-| `spring-boot-devtools` | 개발 편의성 제공 (자동 재시작 등) |
-| `mysql-connector-j` | MySQL 데이터베이스 드라이버 |
+| 의존성 | 설명                                                         |
+| --- |------------------------------------------------------------|
+| `spring-boot-starter-data-jpa` | JPA 및 Hibernate 사용                                         |
+| `spring-boot-starter-validation` | 데이터 유효성 검사 (@Valid 등)                                      |
+| `spring-boot-starter-web` | Spring MVC 웹 애플리케이션 구축 (Spring MVC + REST + JSON + Tomcat) |
+| `lombok` | Boilerplate 코드 제거 (Getter, Setter, Builder 등)              |
+| `spring-boot-devtools` | 개발 편의성 제공 (자동 재시작 등)                                       |
+| `mysql-connector-j` | MySQL 데이터베이스 드라이버                                          |
 
 ## 🚀 주요 기능 및 설정
 
