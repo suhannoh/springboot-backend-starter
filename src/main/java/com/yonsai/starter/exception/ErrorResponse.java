@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
  *  - JSON 형태로 응답한다.
  *  - 상태코드 , 에러메세지 , 에러 생성 시간을 전달한다.
  *
+ *  - ErrorResponse는 예외 발생시에 ApiResponse 필드에 담겨 전달된다
+ *
  * @param code 에러코드
  * @param msg 에러 메시지
  * @param timeStamp 에러 발생 시간
