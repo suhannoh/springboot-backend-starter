@@ -21,4 +21,13 @@ public class HomeController {
 
          return ResponseEntity.ok(ApiResponse.success("Hello Final Project ,,,"));
     }
+
+    /**
+     * Error 테스트 API
+     * - IllegalArgumentException 예외를 던진다.
+     */
+    @GetMapping("/error-test")
+    public void errorTest () {
+        throw new IllegalArgumentException();
+    }
 }
