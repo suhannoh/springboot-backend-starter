@@ -2,6 +2,7 @@ package com.yonsai.starter.home.controller;
 
 import com.yonsai.starter.common.response.ApiResponse;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,4 +31,16 @@ public class HomeController {
     public void errorTest () {
         throw new IllegalArgumentException();
     }
+
+    @GetMapping("/admin-test")
+    public ResponseEntity<ApiResponse<String>> adminTest () {
+        return ResponseEntity.ok(ApiResponse.success("ADMIN TEST"));
+    }
+
+    @GetMapping("/user-test")
+    public ResponseEntity<ApiResponse<String>> userTest (Authentication authentication) {
+        System.out.println("현재 authentication = " + authentication);
+        return ResponseEntity.ok(ApiResponse.success("USER TEST"));
+    }
+
 }

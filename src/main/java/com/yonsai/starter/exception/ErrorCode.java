@@ -15,7 +15,8 @@ public enum ErrorCode {
     CONFLICT(409, "CONFLICT", "이미 존재합니다."),
     VALIDATION_ERROR(422, "VALIDATION_ERROR", "입력값이 올바르지 않습니다."),
     TOO_MANY_REQUESTS(429, "TOO_MANY_REQUESTS", "요청이 너무 많습니다."),
-    INTERNAL_ERROR(500, "INTERNAL_ERROR", "서버 내부 오류가 발생했습니다.");
+    INTERNAL_ERROR(500, "INTERNAL_ERROR", "서버 내부 오류가 발생했습니다."),
+    DUPLICATE_USERNAME(409, "DUPLICATE_USERNAME", "이미 존재하는 아이디입니다.");
 
     public final int status;
     public final String code;

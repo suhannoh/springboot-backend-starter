@@ -6,7 +6,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 /**
+ * CORS 설정
  *
+ * Localhost React 포트번호만 세팅해두었음
  */
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
@@ -20,7 +22,7 @@ public class CorsConfig implements WebMvcConfigurer {
                         "http://localhost:5500",
                         "http://127.0.0.1:5500"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }

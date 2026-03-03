@@ -120,6 +120,33 @@ String name
 
 ---
 
+### 5. Spring Security 설정
+
+위치
+com.yonsai.starter.security
+
+본 프로젝트는 세션 기반 인증 방식을 사용합니다.
+
+로그인 API: POST /login (JSON 요청)
+
+AuthenticationManager를 통해 인증 수행
+
+CustomUserDetailsService에서 DB 사용자 조회
+
+BCryptPasswordEncoder로 비밀번호 검증
+
+인증 성공 시 SecurityContext를 세션에 저장하여 로그인 상태 유지
+
+권한 예시
+
+.requestMatchers("/admin-test").hasRole("ADMIN")
+.requestMatchers("/user-test").hasRole("USER")
+.anyRequest().authenticated()
+
+Role 기반 접근 제어 적용 (ROLE_USER, ROLE_ADMIN)
+
+---
+
 ## 데이터베이스 설정
 
 파일 위치  
