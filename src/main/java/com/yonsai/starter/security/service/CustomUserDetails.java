@@ -34,7 +34,6 @@ public class CustomUserDetails implements UserDetails {
   @Override
   //권한 체크에 사용
   public Collection<? extends GrantedAuthority> getAuthorities() {
-    // ROLE_ prefix가 관례 (Spring Security hasRole과 맞춤)
     return List.of(new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));
   }
 

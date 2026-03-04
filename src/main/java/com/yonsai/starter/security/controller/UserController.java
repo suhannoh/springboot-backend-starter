@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -32,9 +33,9 @@ public class UserController {
    * @return
    */
   @PostMapping("/signup")
-  public ApiResponse<Long> signup(@Valid @RequestBody SignupRequest req) {
+  public ResponseEntity<ApiResponse<Long>> signup(@Valid @RequestBody SignupRequest req) {
     Long userId = userService.signup(req);
-    return ApiResponse.success(userId, "Signup Success");
+    return ResponseEntity.ok(ApiResponse.success(userId, "Signup Success "));
   }
 
   /**
@@ -46,10 +47,9 @@ public class UserController {
    */
 
   @PostMapping("/login")
-  public ApiResponse<String> login(@Valid @RequestBody LoginRequest req,
-                                   HttpServletRequest request,
-                                   HttpServletResponse response) {
-
+  public ResponseEntity<ApiResponse<String>> login(@Valid @RequestBody LoginRequest req,
+                                                  HttpServletRequest request,
+                                                  HttpServletResponse response) {
     // 아직 인증되지 않은 UsernamePasswordAuthenticationToken 생성
     // (username, password를 담은 인증 요청 객체)
     UsernamePasswordAuthenticationToken authenticationToken =
@@ -64,6 +64,6 @@ public class UserController {
     // 이후 요청부터는 로그인된 사용자로 인식됨 (세션 기반)
     securityContextRepository.saveContext(context, request, response);
 
-    return ApiResponse.success(null, "Login Success");
+    return ResponseEntity.ok(ApiResponse.success(null, "Login Success"));
   }
 }
