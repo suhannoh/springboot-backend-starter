@@ -22,6 +22,8 @@
 | spring-boot-starter-data-jpa | JPA 및 Hibernate 사용 |
 | spring-boot-starter-validation | DTO 유효성 검사 (@Valid 등) |
 | spring-boot-starter-web | Spring MVC + REST + JSON + Tomcat |
+| spring-boot-starter-securitiy |  |
+| spring-cloud-aws-starter-s3 |
 | lombok | Getter/Setter/Builder 등 반복 코드 제거 |
 | spring-boot-devtools | 개발 편의 기능 (자동 재시작 등) |
 | mysql-connector-j | MySQL 드라이버 |
